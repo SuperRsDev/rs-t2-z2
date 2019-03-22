@@ -13,17 +13,11 @@ public class Controller {
 
     public void UnosTeksta(ActionEvent actionEvent) {
         var tekst = uneseniTekst.getText();
-        var noviTekstSaNajduzomRijeci = NajduzaRijecUVelikaSlova(tekst);
-        izmjenjeniTekst.setText(noviTekstSaNajduzomRijeci);
     }
 
-     private String NajduzaRijecUVelikaSlova(String tekst) {
-        String[] rijeci = tekst.trim().split("\\s+");
-        Arrays.sort(rijeci, Comparator.comparingInt(String::length).reversed()); // Sortiranje u desc orderuv
-        var najduzaRijec = rijeci[0];
-        var najduzaRijecVelikaSlova = najduzaRijec.toUpperCase();
-        return tekst.replaceAll("\\b"+ najduzaRijec +"\\b", najduzaRijecVelikaSlova);
-     }
+     private static int[] BrojClanovaVeciOdElementa(int[] niz, int element) {
 
+        return niz;
+     }
 }
 
