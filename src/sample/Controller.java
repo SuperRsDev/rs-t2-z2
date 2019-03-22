@@ -18,11 +18,10 @@ public class Controller {
     }
 
      private String NajduzaRijecUVelikaSlova(String tekst) {
-        String[] rijeci = tekst.split("\\\\s+");
+        String[] rijeci = tekst.trim().split("\\s+");
         Arrays.sort(rijeci, Comparator.comparingInt(String::length).reversed()); // Sortiranje u desc orderuv
         var najduzaRijec = rijeci[0];
         var najduzaRijecVelikaSlova = najduzaRijec.toUpperCase();
-        System.out.println(najduzaRijecVelikaSlova + "  "  +najduzaRijec);
         return tekst.replaceAll("\\b"+ najduzaRijec +"\\b", najduzaRijecVelikaSlova);
      }
 
